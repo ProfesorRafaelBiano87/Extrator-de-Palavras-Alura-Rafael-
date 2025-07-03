@@ -7,11 +7,20 @@ function mostraPalavrasChave() {
    const campoResultado = document.querySelector('#resultado-palavrachave');
    const palavrasChave = processaTexto(texto);
 
+  
    campoResultado.textContent = palavrasChave.join(", ");
 }
 
 function processaTexto(texto){
     let palavras = texto.split(/\P{L}+/u);
+  
+  let frequencias = [];
+  for( let i in palavras){
+    frequencias[i] = 0; 
+  }
+  
+  console.log(frequencias);
+  
     return palavras;
 
 }
